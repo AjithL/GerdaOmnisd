@@ -1,0 +1,47 @@
+{
+  "version": "0.0.8",
+  "name": "GerdaPkg",
+  "description": "Install KaiOS/GerdaOS apps from SD card",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/img/icon_56.png",
+    "112": "/img/icon_112.png"
+  },
+  "developer": {
+    "name": "Luxferre",
+    "url": "http://831337.xyz"
+  },
+  "type": "certified",
+  "origin": "app://pkg.gerda.tech",
+  "role": "system",
+  "permissions": {
+    "device-storage:sdcard" : {
+      "description": "Required for accessing app manifest files",
+      "access": "readonly"
+    },
+    "device-storage:sdcard1" : {
+      "description": "Required for accessing app manifest files",
+      "access": "readonly"
+    },
+    "device-storage:apps":{ "access": "readwrite" },
+    "webapps-manage":{},
+    "power":{}
+  },
+  "locales": {},
+  "default_locale": "en",
+  "activities": {
+    "tech.gerda.pkg.help": {
+      "href": "./help.html",
+      "disposition": "inline",
+      "returnValue": true
+    },
+    "open": {
+      "href": "./index.html#external",
+      "disposition": "inline",
+      "filters": {
+        "type": ["application/zip"]
+      },
+      "returnValue": true
+    }
+  }
+}
